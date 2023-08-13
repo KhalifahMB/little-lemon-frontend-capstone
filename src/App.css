@@ -1,3 +1,235 @@
-* {
+.App {
+	text-align: center;
 	font-family: "Markazi Text", serif;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	background-color: rgb(255, 255, 255);
+}
+
+nav img {
+	width: 200px;
+}
+
+nav ul {
+	display: flex;
+	list-style: none;
+	margin: 0px;
+	padding-inline-start: 40px;
+}
+nav ul li {
+	padding: 20px 20px 20px 20px;
+	height: 100%;
+	transition-duration: 2s;
+}
+nav ul li a {
+	text-decoration: none;
+	/* color: red; */
+}
+nav ul li a:active {
+	color: red;
+}
+
+li:hover {
+	background-color: #495e57;
+	color: #f4ce14;
+}
+
+ul li {
+	transition-duration: 0.3s;
+}
+
+header {
+	padding-top: 150px;
+	background-color: #495e57;
+}
+
+header section {
+	width: 80%;
+	margin-left: 10%;
+	padding-bottom: 50px;
+	color: #edefee;
+}
+
+h2 {
+	color: #f4ce14;
+	font-size: 40pt;
+}
+
+h3 {
+	font-size: 20pt;
+}
+
+p {
+	font-size: 16pt;
+	max-width: 65ch;
+	line-height: 1.5;
+}
+
+button {
+	background-color: #f4ce14;
+	color: black;
+	padding: 20px;
+	/* border: none; */
+	text-decoration: none;
+	border-radius: 12px;
+	font-size: 16pt;
+	font-weight: bold;
+	transition-duration: 0.3s;
+	border: solid 2px #f4ce14;
+}
+
+button:hover {
+	background-color: #ffffff;
+	color: #495e57;
+	border: solid 2px #000000;
+}
+
+header img {
+	height: 500px;
+	border-radius: 12pt;
+}
+
+footer section {
+	justify-items: center;
+	width: 80%;
+	margin-left: 10%;
+	gap: 20px;
+}
+
+footer {
+	padding: 20px;
+}
+
+footer img {
+	height: 300px;
+}
+
+form {
+	display: grid;
+	max-width: 200px;
+	gap: 20px;
+}
+/* _________________________ */
+
+.menu {
+	padding-block: 2em;
+	width: 100vw;
+}
+
+.menu-desc {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 2em;
+	margin-bottom: 2em;
+}
+
+.menu-img,
+.reviewer-img {
+	width: 100%;
+}
+
+.menu-img {
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+}
+
+.cards,
+.testimonials {
+	display: flex;
+	/* min-width: 500px; */
+	width: 80%;
+	/* flex-wrap: wrap; */
+	gap: 2em;
+	align-content: center;
+	align-items: stretch;
+	margin: auto;
+	justify-content: center;
+}
+
+.card,
+.testimonial {
+	width: 30%;
+	height: 0%;
+	padding: 0.5em;
+	display: flex;
+	flex-direction: column;
+	gap: 0.3em;
+}
+
+.card {
+	background-color: #edefee;
+	border-radius: 16px;
+	position: relative;
+}
+
+.name-price,
+.name-rating {
+	display: flex;
+	justify-content: space-between;
+}
+@keyframes buttonAnimate {
+	20% {
+		filter: hue-rotate(120deg);
+	}
+
+	60% {
+		filter: hue-rotate(240deg);
+	}
+
+	100% {
+		filter: hue-rotate(360deg);
+	}
+}
+
+p[role="button"] {
+	background-color: #f4ce14;
+	color: #495e57;
+	text-align: center;
+	cursor: pointer;
+	margin-top: 0;
+	padding: 1px;
+	border-radius: 20%;
+	transition-duration: 2s;
+	animation-name: buttonAnimate;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+p[role="button"]:hover {
+	background-color: #495e57;
+	color: #f4ce14;
+	animation: none;
+}
+
+/* _________________________ */
+
+@media (max-width: 700px) {
+	header section,
+	footer section {
+		display: grid;
+		grid-auto-flow: row;
+	}
+}
+
+@media (min-width: 701px) {
+	footer section {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		display: grid;
+	}
+	header section {
+		grid-template-columns: 1fr 1fr;
+		display: grid;
+		justify-items: center;
+	}
 }
